@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Totot ቶቶት | Traditional Food Hall, Addis Ababa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0705;--bg2:#150b07;--card:#1c110b;--text:#f3e7d3;--muted:#b9a48a;--gold:#d4a84b;--gold2:#f2d487;--red:#8e1f12;--line:rgba(212,168,75,.25);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:'Jost','Segoe UI','Noto Sans Ethiopic',Nyala,system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,'Noto Serif Ethiopic',Nyala,serif;font-weight:500;line-height:1.1}
+.wrap{max-width:1140px;margin:auto;padding:0 max(22px,env(safe-area-inset-right,0px)) 0 max(22px,env(safe-area-inset-left,0px))}
+.gold{background:linear-gradient(100deg,#b8862b,#f6df9b 40%,#d4a84b 60%,#b8862b);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.eyebrow{letter-spacing:.38em;font-size:.72rem;text-transform:uppercase;color:var(--gold)}
+#intro{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;text-align:center;transition:opacity .9s,visibility .9s}
+#intro.off{opacity:0;visibility:hidden}
+#intro h1{font-size:clamp(3rem,10vw,6rem);letter-spacing:.2em;animation:fi 1.4s both}
+#intro p{color:var(--muted);letter-spacing:.4em;font-size:.75rem;animation:fi 1.4s .5s both}
+@keyframes fi{from{opacity:0;transform:translateY(20px);letter-spacing:.6em}to{opacity:1;transform:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s;padding-top:env(safe-area-inset-top,0px)}
+nav.s{background:rgba(13,7,5,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-family:Georgia,serif;font-size:1.5rem;letter-spacing:.25em}
+.logo small{display:block;font-size:.55rem;letter-spacing:.35em;color:var(--muted);margin-top:-3px}
+nav ul{display:flex;gap:34px;list-style:none;padding:0}
+nav a{color:var(--text);text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;transition:.3s}
+nav a:hover{color:var(--gold);opacity:1}
+.btn{display:inline-block;padding:15px 36px;border:1px solid var(--gold);color:var(--gold2);text-decoration:none;letter-spacing:.22em;font-size:.76rem;text-transform:uppercase;position:relative;overflow:hidden;transition:.4s;background:none;cursor:pointer;font-family:inherit}
+.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#b8862b,#f2d487);transform:translateX(-101%);transition:.5s;z-index:-1}
+.btn:hover{color:#1a0e06}.btn:hover::before{transform:none}
+.btn.solid{background:linear-gradient(100deg,#b8862b,#f2d487);color:#1a0e06;border:none}
+.btn{z-index:0}
+.hero{min-height:100vh;min-height:100svh;position:relative;display:flex;align-items:center;background:radial-gradient(ellipse at 70% 45%,rgba(142,31,18,.55),transparent 60%),radial-gradient(ellipse at 20% 90%,rgba(212,168,75,.12),transparent 50%),var(--bg);overflow:hidden}
+#c3d{position:absolute;right:0;top:0;width:62%;height:100%}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(2.1rem,7.5vw,5.6rem);margin:18px 0 22px}
+.hero p{max-width:470px;color:var(--muted);margin-bottom:36px}
+.hero .btn{margin-right:14px;margin-bottom:12px}
+.scroll{position:absolute;bottom:26px;left:50%;width:1px;height:56px;background:linear-gradient(var(--gold),transparent);animation:sc 2s infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;background:var(--bg2)}
+.mq div{display:flex;gap:56px;white-space:nowrap;width:max-content;animation:mq 32s linear infinite;font-family:Georgia,serif;font-size:1.3rem;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:120px 0;position:relative}
+.head{text-align:center;margin-bottom:64px}
+.head h2{font-size:clamp(2rem,5vw,3.4rem);margin-top:14px}
+.orn{width:120px;height:14px;margin:22px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);clip-path:polygon(0 50%,45% 40%,50% 0,55% 40%,100% 50%,55% 60%,50% 100%,45% 60%)}
+.rv{opacity:0;transform:translateY(46px);transition:1.1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p{color:var(--muted);margin-bottom:18px}
+.about h2{font-size:clamp(2rem,4vw,3rem);margin:14px 0 24px}
+.stage{perspective:1100px}
+.frame{aspect-ratio:4/5;border:1px solid var(--gold);padding:14px;transform-style:preserve-3d;transition:transform .15s}
+.frame .in{height:100%;background:radial-gradient(circle at 50% 35%,#a82a14,#3a0f08 55%,#120805);display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}
+.frame .in::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 22px,rgba(212,168,75,.07) 22px 23px)}
+.frame b{font-family:Georgia,serif;font-size:clamp(4rem,9vw,6.5rem);font-weight:400;position:relative;transform:translateZ(60px)}
+.frame span{position:absolute;bottom:26px;letter-spacing:.35em;font-size:.65rem;color:var(--gold2);transform:translateZ(40px)}
+.stats{display:flex;gap:44px;margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.stats b{font-family:Georgia,serif;font-size:2.3rem;color:var(--gold);display:block;font-weight:400}
+.stats small{color:var(--muted);font-size:.78rem;letter-spacing:.1em}
+.kit{background:var(--bg2);border-block:1px solid var(--line);overflow:hidden}
+.kit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.kit h2{font-size:clamp(2.4rem,6vw,4.6rem);margin:12px 0 20px}
+.kit p{color:var(--muted);margin-bottom:14px}
+.tags span{display:inline-block;border:1px solid var(--line);padding:6px 16px;margin:6px 8px 0 0;font-size:.78rem;letter-spacing:.12em;color:var(--gold2)}
+#c2d{width:100%;aspect-ratio:1;max-height:480px}
+.tabs{display:flex;justify-content:center;gap:34px;margin-bottom:50px;flex-wrap:wrap}
+.tabs button{background:none;border:none;color:var(--muted);font:inherit;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem;cursor:pointer;padding:12px 2px;border-bottom:1px solid transparent;transition:.3s}
+.tabs button.on,.tabs button:hover{color:var(--gold2);border-color:var(--gold)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 70px;max-width:980px;margin:auto}
+.it{padding:20px 0;border-bottom:1px solid var(--line);animation:up .7s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.it h3{font-size:1.28rem;display:flex;justify-content:space-between;gap:12px}
+.it h3 em{font-style:normal;color:var(--gold)}
+.it p{color:var(--muted);font-size:.88rem;margin-top:4px}
+.exp{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.xc{perspective:900px}
+.x{background:linear-gradient(160deg,var(--card),#0f0805);border:1px solid var(--line);padding:42px 28px;height:100%;transition:transform .2s,border-color .4s;transform-style:preserve-3d}
+.x:hover{border-color:var(--gold)}
+.x i{font-style:normal;font-family:Georgia,serif;font-size:2.6rem;color:var(--gold);display:block;margin-bottom:18px;transform:translateZ(40px)}
+.x h3{font-size:1.25rem;margin-bottom:10px;transform:translateZ(30px)}
+.x p{color:var(--muted);font-size:.9rem}
+.rv2{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.q{border:1px solid var(--line);padding:36px;background:var(--card)}
+.q .st{color:var(--gold);letter-spacing:.3em}
+.q p{font-family:Georgia,serif;font-style:italic;font-size:1.08rem;margin:16px 0;color:var(--text)}
+.q small{color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem}
+.visit{background:var(--bg2);border-top:1px solid var(--line)}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.vg h3{font-size:1.5rem;margin-bottom:24px}
+.row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.row b{color:var(--gold);min-width:90px;font-weight:400;letter-spacing:.18em;font-size:.72rem;text-transform:uppercase;padding-top:4px}
+.row a{color:var(--text);text-decoration:none}
+form input,form select{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--text);padding:14px 2px;margin-bottom:12px;font:inherit;outline:none;transition:.3s;color-scheme:dark}
+form input:focus,form select:focus{border-color:var(--gold)}
+form option{background:#1c110b}
+#res{display:none;margin-top:20px;padding:20px;border:1px solid var(--gold);color:var(--gold2)}
+footer{text-align:center;padding:50px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;letter-spacing:.14em}
+footer .logo{color:var(--gold);margin-bottom:10px}
+#glow{position:fixed;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,75,.13),transparent 65%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);left:-400px;top:0}
+#bg{display:none;width:44px;height:44px;background:none;border:1px solid var(--line);margin-left:12px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+#bg i{display:block;width:20px;height:1px;background:var(--gold);transition:.3s}
+nav.open #bg i:first-child{transform:translateY(3.5px) rotate(45deg)}nav.open #bg i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+@media(max-width:1000px){#bg{display:flex}nav.s{backdrop-filter:none;background:rgba(13,7,5,.96)}nav ul{position:fixed;inset:0;background:rgba(13,7,5,.97);flex-direction:column;justify-content:center;align-items:center;gap:32px;opacity:0;visibility:hidden;transition:.4s;z-index:-1}nav.open ul{opacity:1;visibility:visible}nav ul a{font-size:1rem}}
+@media(max-width:860px){.hero{flex-direction:column;align-items:stretch;padding:100px 0 30px;min-height:auto}#c3d{position:relative;right:auto;top:auto;width:100%;height:min(95vw,460px);order:2;margin-top:8px}.hero .wrap{order:1}.scroll{display:none}.about,.kit .wrap,.vg{grid-template-columns:1fr;gap:40px}.stage{max-width:380px;margin:auto;width:100%}.menu{grid-template-columns:1fr}.exp,.rv2{grid-template-columns:1fr 1fr}section{padding:80px 0}#glow{display:none}}
+@media(max-width:560px){.exp,.rv2{grid-template-columns:1fr}.stats{gap:24px;flex-wrap:wrap}.hero .btn{display:block;text-align:center;margin-right:0}.head{margin-bottom:44px}.tabs{gap:22px}.it h3{font-size:1.12rem}section{padding:64px 0}}
+@media(max-width:480px){.nres{display:none}.logo{font-size:1.25rem;letter-spacing:.2em}.logo small{letter-spacing:.2em}}
+@media(hover:none){#glow{display:none}}
+.hero .wrap{pointer-events:none}.hero .wrap a{pointer-events:auto}
+.hero h1{font-size:clamp(2.5rem,8vw,6.4rem);line-height:1.02}
+.head h2{font-size:clamp(2.4rem,6vw,4rem)}.about h2{font-size:clamp(2.2rem,4.5vw,3.5rem)}
+.logo,.mq div,.stats b,.x i,.q p,.frame b{font-family:'Cormorant Garamond',Georgia,'Noto Serif Ethiopic',Nyala,serif}
+.logo{font-weight:600}.it h3{font-size:1.5rem}.x h3{font-size:1.55rem}.q p{font-size:1.3rem}.hero p,.about p,.kit p{font-size:1.04rem}
+.it{transition:.35s}.it:hover{padding-left:14px;border-color:var(--gold)}
+.badge{margin-top:30px;font-size:.78rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.badge b{color:var(--gold2);font-weight:500;margin-right:8px}
+.hint{position:absolute;right:0;bottom:22px;width:62%;text-align:center;font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.8;pointer-events:none;z-index:2}
+#pg{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#b8862b,#f2d487);z-index:120}
+::selection{background:var(--gold);color:#1a0e06}
+html{scrollbar-color:var(--gold) var(--bg);scrollbar-width:thin}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+#dock{display:none}
+@media(max-width:860px){.hint{width:100%;bottom:8px}#dock{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:10px;position:fixed;visibility:hidden;transform:translateY(110%);transition:transform .45s,visibility .45s;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(13,7,5,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}#dock a{text-align:center;padding:13px 6px;border:1px solid var(--line);color:var(--gold2);text-decoration:none;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}#dock a.p{background:linear-gradient(100deg,#b8862b,#f2d487);color:#1a0e06;border:none;font-weight:500}footer{padding-bottom:110px}#dock.show{visibility:visible;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="intro"><div><h1 class="gold">TOTOT</h1><p>ቶቶት · TRADITIONAL FOOD HALL</p></div></div>
+<div id="glow"></div><div id="pg"></div>
+<nav id="nav"><div class="wrap">
+<div class="logo gold">TOTOT<small>ቶቶት · ባህል ምግብ አዳራሽ</small></div>
+<ul><li><a href="#story">Story</a></li><li><a href="#kitfo">Kitfo</a></li><li><a href="#menu">Menu</a></li><li><a href="#exp">Experience</a></li><li><a href="#visit">Visit</a></li></ul>
+<a class="btn nres" style="padding:10px 22px" href="#visit">Reserve</a><button id="bg" aria-label="Menu"><i></i><i></i></button>
+</div></nav>
+
+<header class="hero"><canvas id="c3d"></canvas><div class="hint">Drag to rotate</div>
+<div class="wrap"><div>
+<span class="eyebrow">Gerji · Addis Ababa · Ethiopia</span>
+<h1><span class="gold">Where Ethiopia's<br>Table Comes Alive</span></h1>
+<p>ቶቶት: one of Addis Ababa's most celebrated traditional restaurants. Famed for kitfo, live cultural music, honey wine and the full coffee ceremony.</p>
+<a class="btn solid" href="#visit">Reserve a Table</a><a class="btn" href="#menu">Discover the Menu</a>
+<div class="badge"><b>★ 4.6</b>TasteAtlas · Totot Kitfo<br>Gerji, Addis Ababa</div>
+</div></div><div class="scroll"></div></header>
+
+<div class="mq"><div><span>ክትፎ Kitfo</span><span>✦</span><span>ቡና Coffee Ceremony</span><span>✦</span><span>ጠጅ Honey Wine</span><span>✦</span><span>Live Cultural Show</span><span>✦</span><span>ቆጮ Qocho</span><span>✦</span><span>አይብ Ayib</span><span>✦</span>
+<span>ክትፎ Kitfo</span><span>✦</span><span>ቡና Coffee Ceremony</span><span>✦</span><span>ጠጅ Honey Wine</span><span>✦</span><span>Live Cultural Show</span><span>✦</span><span>ቆጮ Qocho</span><span>✦</span><span>አይብ Ayib</span><span>✦</span></div></div>
+
+<section id="story"><div class="wrap about">
+<div class="stage rv"><div class="frame" id="tilt"><div class="in"><b class="gold">ቶቶት</b><span>ADDIS ABABA · GERJI</span></div></div></div>
+<div class="rv">
+<span class="eyebrow">Our Story</span>
+<h2>From a shoeshine boy's dream to a <span class="gold">national landmark</span></h2>
+<p>Totot was built by its owner and CEO, Tenkir Teni, who began as a shoeshine boy more than thirty years ago and grew it into one of the capital's top traditional restaurants.</p>
+<p>Inside, dozens of waitresses in traditional attire serve Gurage-style dishes against a backdrop of live music and dance, in a hall celebrated for both its interior and exterior design.</p>
+<div class="stats"><div><b data-n="30">0</b><small>YEARS OF VISION</small></div><div><b>Live</b><small>CULTURAL SHOW</small></div><div><b>Gurage</b><small>CULINARY ROOTS</small></div></div>
+</div></div></section>
+
+<section class="kit" id="kitfo"><div class="wrap">
+<div class="rv"><canvas id="c2d" width="600" height="600"></canvas></div>
+<div class="rv">
+<span class="eyebrow">The Signature · ክትፎ</span>
+<h2 class="gold">Totot Kitfo</h2>
+<p>The dish Totot is known for. Finely minced beef, warmed with spiced clarified butter and mitmita, served the traditional way alongside ayib, a fresh cottage-style cheese plated on a banana leaf, with injera.</p>
+<p>Guests also take it with gomen kitfo and qocho, the Gurage bread, for the full tradition.</p>
+<div class="tags"><span>Ayib</span><span>Gomen</span><span>Qocho</span><span>Injera</span><span>Mitmita</span></div>
+</div></div></section>
+
+<section id="menu"><div class="wrap">
+<div class="head rv"><span class="eyebrow">ምግብ ዝርዝር</span><h2>The <span class="gold">Menu</span></h2><div class="orn"></div></div>
+<div class="tabs" id="tabs"></div>
+<div class="menu" id="menu-g"></div>
+</div></section>
+
+<section id="exp" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+<div class="head rv"><span class="eyebrow">ልምድ</span><h2>The <span class="gold">Experience</span></h2><div class="orn"></div></div>
+<div class="exp">
+<div class="xc rv"><div class="x"><i>01</i><h3>Live Cultural Show</h3><p>Traditional music and Gurage dancing and singing on stage while you dine.</p></div></div>
+<div class="xc rv"><div class="x"><i>02</i><h3>Coffee Ceremony</h3><p>Roasted beans, rich aroma and the unhurried ritual of Ethiopian hospitality.</p></div></div>
+<div class="xc rv"><div class="x"><i>03</i><h3>Honey Wine</h3><p>Tej, the traditional honey wine, poured the way guests have loved it for generations.</p></div></div>
+<div class="xc rv"><div class="x"><i>04</i><h3>Heritage Hall</h3><p>A beautifully designed interior and exterior, with staff in traditional attire.</p></div></div>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="head rv"><span class="eyebrow">Guests</span><h2>Words from <span class="gold">the Table</span></h2><div class="orn"></div></div>
+<div class="rv2">
+<div class="q rv"><div class="st">★★★★★</div><p>Expensive but worth it. The best Gurage restaurant ever.</p><small>Guest review</small></div>
+<div class="q rv"><div class="st">★★★★★</div><p>Good Ethiopian food and a live stage show.</p><small>Guest review</small></div>
+<div class="q rv"><div class="st">★★★★★</div><p>I come here whenever I visit Addis.</p><small>Visitor from Norway</small></div>
+</div></div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+<div class="head rv"><span class="eyebrow">ቦታ ያስይዙ</span><h2>Reserve <span class="gold">Your Evening</span></h2><div class="orn"></div></div>
+<div class="vg">
+<div class="rv"><h3>Visit Totot</h3>
+<div class="row"><b>Location</b><span>Gerji, Addis Ababa, Ethiopia<br>Near Meberat Hail condominium</span></div>
+<div class="row"><b>Phone</b><a href="tel:+251116460718">+251 11 646 0718</a></div>
+<div class="row"><b>Map</b><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Totot+Traditional+food+Hall+Gerji+Addis+Ababa">Open in Google Maps</a></div>
+<div class="row"><b>Busiest</b><span>Thursday evenings, around 8 PM</span></div></div>
+<div class="rv"><h3>Request a Table</h3>
+<form id="f"><input id="n" placeholder="Full name · ሙሉ ስም" required><input id="d" type="datetime-local" required>
+<select id="g"><option>2 guests</option><option>4 guests</option><option>6 guests</option><option>8 guests</option><option>10+ guests</option></select>
+<button class="btn solid" type="submit">Prepare Reservation</button></form>
+<div id="res"></div></div>
+</div></div></section>
+
+<footer><div class="logo gold">TOTOT ቶቶት</div>Traditional Food Hall · Gerji, Addis Ababa<br><br>© 2026 TOTOT</footer>
+
+<div id="dock"><a href="tel:+251116460718">Call</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Totot+Traditional+food+Hall+Gerji+Addis+Ababa">Directions</a><a class="p" href="#visit">Reserve</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// intro + nav
+setTimeout(function(){document.getElementById('intro').className='off'},1900);
+var nav=document.getElementById('nav'),bg=document.getElementById('bg'),ul=nav.querySelector('ul');bg.onclick=function(){nav.classList.toggle('open')};ul.onclick=function(){nav.classList.remove('open')};
+addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40);document.getElementById('pg').style.width=(scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)*100)+'%';document.getElementById('dock').classList.toggle('show',document.getElementById('visit').getBoundingClientRect().top<innerHeight*.7)});
+// reveal + counter
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var c=e.target.querySelector('[data-n]');if(c&&!c.d){c.d=1;var t=+c.dataset.n,i=0,iv=setInterval(function(){c.textContent=++i+'+';if(i>=t)clearInterval(iv)},40)}io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+// cursor glow
+var gl=document.getElementById('glow');
+addEventListener('mousemove',function(e){gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});
+// 3D tilt
+function tilt(el,box,k){box.addEventListener('pointermove',function(e){var r=box.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='rotateY('+x*k+'deg) rotateX('+(-y*k)+'deg)'});box.addEventListener('pointerleave',function(){el.style.transform=''})}
+var fr=document.getElementById('tilt');tilt(fr,fr.parentNode,22);
+document.querySelectorAll('.xc').forEach(function(c){tilt(c.firstChild,c,18)});
+// menu
+var M={
+"Signature":[["Kitfo","ክትፎ","Hand-minced beef with spiced butter and mitmita"],["Gomen Kitfo","ጎመን ክትፎ","Kitfo with butter-sautéed collard greens"],["Ayib","አይብ","Fresh cottage-style cheese on banana leaf"],["Qocho","ቆጮ","Traditional Gurage enset bread"]],
+"Traditional":[["Gored Gored","ጎረድ ጎረድ","Cubed beef, awaze, warm niter kibbeh"],["Tibs","ጥብስ","Sautéed beef with onion and pepper"],["Doro Wot","ዶሮ ወጥ","Slow-cooked spiced chicken stew with egg"],["Beyaynetu","በያይነቱ","Mixed fasting platter on fresh injera"]],
+"Drinks":[["Buna","ቡና","Ethiopian coffee ceremony"],["Tej","ጠጅ","Traditional honey wine"],["Ambo Water","አምቦ ውሃ","Sparkling mineral water"],["Spris","ስፕሪስ","Layered fresh fruit juice"]]};
+var tb=document.getElementById('tabs'),mg=document.getElementById('menu-g');
+function show(k){Array.prototype.forEach.call(tb.children,function(b){b.className=b.textContent===k?'on':''});
+mg.innerHTML=M[k].map(function(x,i){return '<div class="it" style="animation-delay:'+i*90+'ms"><h3>'+x[0]+'<em>'+x[1]+'</em></h3><p>'+x[2]+'</p></div>'}).join('')}
+Object.keys(M).forEach(function(k){var b=document.createElement('button');b.textContent=k;b.onclick=function(){show(k)};tb.appendChild(b)});show('Signature');
+// reservation
+document.getElementById('f').onsubmit=function(e){e.preventDefault();var r=document.getElementById('res');r.style.display='block';r.innerHTML='Reservation details ready for <b>'+document.getElementById('n').value.replace(/</g,'')+'</b>, '+document.getElementById('g').value+', '+document.getElementById('d').value.replace('T',' at ')+'.<br><br>Please call <a style="color:#f2d487" href="tel:+251116460718">+251 11 646 0718</a> to confirm your table.'};
+// 3D hero: textured, realistic Ethiopian food platter
+(function(){if(!window.THREE)return;var T=THREE,cv=document.getElementById('c3d'),R;
+try{R=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){return}
+R.setPixelRatio(Math.min(devicePixelRatio,innerWidth<860?1.5:2));R.shadowMap.enabled=true;R.shadowMap.type=T.PCFSoftShadowMap;R.outputEncoding=T.sRGBEncoding;R.toneMapping=T.ACESFilmicToneMapping;R.toneMappingExposure=1.15;
+function rnd(a,b){return a+Math.random()*(b-a)}
+function CT(d,rep,srgb){var c=document.createElement('canvas');c.width=c.height=512;d(c.getContext('2d'));var t=new T.CanvasTexture(c);t.wrapS=t.wrapT=T.RepeatWrapping;t.repeat.set(rep,rep);t.anisotropy=4;if(srgb)t.encoding=T.sRGBEncoding;return t}
+function fill(x,c){x.fillStyle=c;x.fillRect(0,0,512,512)}
+function dots(x,n,r1,r2,cols){for(var i=0;i<n;i++){x.fillStyle=cols[i%cols.length];x.beginPath();x.arc(rnd(0,512),rnd(0,512),rnd(r1,r2),0,7);x.fill()}}
+function strokes(x,n,l1,l2,w,cols){for(var i=0;i<n;i++){var X=rnd(0,512),Y=rnd(0,512),a=rnd(0,6.3),l=rnd(l1,l2);x.strokeStyle=cols[i%cols.length];x.lineWidth=rnd(w*.6,w);x.beginPath();x.moveTo(X,Y);x.lineTo(X+Math.cos(a)*l,Y+Math.sin(a)*l);x.stroke()}}
+function M(cd,bd,rep,rough,bs){return new T.MeshStandardMaterial({map:CT(cd,rep,1),bumpMap:bd?CT(bd,rep):null,bumpScale:bs||1.5,roughness:rough})}
+var P=[];for(var i=0;i<4500;i++)P.push([rnd(0,512),rnd(0,512),rnd(.8,2.6)]);
+function pores(x,c){x.fillStyle=c;P.forEach(function(p){x.beginPath();x.arc(p[0],p[1],p[2],0,7);x.fill()})}
+var mInj=M(function(x){fill(x,'#d9bf8c');dots(x,50,20,70,['rgba(160,110,55,.12)','rgba(235,215,165,.15)']);pores(x,'rgba(105,65,28,.55)')},function(x){fill(x,'#c8c8c8');pores(x,'#1a1a1a')},3,.85,2.2);
+var mKit=M(function(x){fill(x,'#a3281c');strokes(x,9000,3,9,2,['#c23a2a','#8a1d13','#d6583a','#6a130b','#e3a94c','#d4701e','#b02e22'])},function(x){fill(x,'#888');strokes(x,9000,3,8,2.4,['#fff','#333','#bbb','#555'])},4,.5,2.5);
+var mAyib=M(function(x){fill(x,'#f0ead8');dots(x,2500,2,6,['#fffbee','#e3dbc2','#f7f2e2'])},function(x){fill(x,'#999');dots(x,2500,2,6,['#fff','#444','#ccc'])},4,.8,2.5);
+var mGom=M(function(x){fill(x,'#2b5420');strokes(x,6000,6,16,3,['#3f7a2a','#1e4515','#7aa83a','#2f6023','#d9b24a'])},function(x){fill(x,'#888');strokes(x,5000,6,14,3,['#fff','#222','#aaa'])},3,.55,2);
+var mWot=M(function(x){fill(x,'#66200e');dots(x,300,3,14,['rgba(143,58,20,.5)','rgba(60,15,6,.5)','rgba(200,120,40,.35)'])},function(x){fill(x,'#999');dots(x,300,3,12,['#fff','#555'])},2,.18,.6);
+var mShi=M(function(x){fill(x,'#c98324');dots(x,500,2,9,['rgba(168,100,26,.5)','rgba(235,170,60,.4)'])},function(x){fill(x,'#aaa');dots(x,500,2,8,['#fff','#666'])},2,.28,.8);
+var mLen=M(function(x){fill(x,'#b04e1a');dots(x,4000,1.5,3.2,['#d9742a','#8c3a12','#e89a4a','#a0431a'])},function(x){fill(x,'#999');dots(x,4000,1.5,3,['#fff','#333'])},3,.5,2.2);
+var mWood=M(function(x){fill(x,'#4a2814');for(var i=0;i<260;i++){x.fillStyle=i%2?'rgba(20,8,2,.35)':'rgba(130,80,40,.25)';x.fillRect(0,rnd(0,512),512,rnd(1,5))}},function(x){fill(x,'#999');for(var i=0;i<260;i++){x.fillStyle=i%2?'#333':'#ddd';x.fillRect(0,rnd(0,512),512,rnd(1,3))}},1,.45,1);
+var mLeaf=M(function(x){var g=x.createLinearGradient(0,0,512,0);g.addColorStop(0,'#1f5524');g.addColorStop(.5,'#3c8a3a');g.addColorStop(1,'#1f5524');x.fillStyle=g;x.fillRect(0,0,512,512);x.strokeStyle='rgba(190,230,140,.45)';x.lineWidth=3;for(var i=0;i<26;i++){x.beginPath();x.moveTo(256,i*21);x.lineTo(0,i*21-70);x.moveTo(256,i*21);x.lineTo(512,i*21-70);x.stroke()}},null,1,.5);
+var mSpiral=new T.MeshStandardMaterial({map:CT(function(x){fill(x,'#d9bf8c');x.strokeStyle='rgba(120,80,35,.6)';x.lineWidth=5;for(var r=10;r<256;r+=14){x.beginPath();x.arc(256,256,r,0,7);x.stroke()}},1,1),roughness:.9});
+var mEgg=new T.MeshStandardMaterial({color:0xf4efe2,roughness:.3}),mYolk=new T.MeshStandardMaterial({color:0xf2b01a,roughness:.25}),mMeat=new T.MeshStandardMaterial({color:0x7a3416,roughness:.35}),mTibs=new T.MeshStandardMaterial({color:0x7e3b1d,roughness:.5,bumpMap:mKit.bumpMap,bumpScale:2}),mPep=new T.MeshStandardMaterial({color:0x4f9a2a,roughness:.4});
+function lump(g,a,f){var p=g.attributes.position,v=new T.Vector3();for(var i=0;i<p.count;i++){v.fromBufferAttribute(p,i);var n=Math.sin(v.x*f+1.3)*Math.cos(v.y*f*1.3)*Math.sin(v.z*f*1.1+.7)+.5*Math.sin(v.x*f*2.7)*Math.cos(v.z*f*2.3+1);v.multiplyScalar(1+n*a);p.setXYZ(i,v.x,v.y,v.z)}g.computeVertexNormals()}
+function mound(r,h,m,a,f){var g=new T.SphereGeometry(r,48,36);lump(g,a,f);var o=new T.Mesh(g,m);o.scale.y=h;o.castShadow=o.receiveShadow=true;return o}
+var S=new T.Scene(),C=new T.PerspectiveCamera(40,1,.1,100);C.position.set(0,5.4,8);C.lookAt(0,0,0);
+S.add(new T.HemisphereLight(0xffe6c0,0x2a1208,.7));
+var K=new T.DirectionalLight(0xffd8a0,1.7);K.position.set(4,9,5);K.castShadow=true;K.shadow.mapSize.set(1024,1024);var sc=K.shadow.camera;sc.left=sc.bottom=-5;sc.right=sc.top=5;K.shadow.bias=-.0005;S.add(K);
+var L2=new T.PointLight(0xc03018,1.2,30);L2.position.set(-6,3,-4);S.add(L2);
+var L3=new T.PointLight(0xffc766,.8,20);L3.position.set(0,3,5);S.add(L3);
+var sh=new T.Mesh(new T.PlaneGeometry(20,20),new T.ShadowMaterial({opacity:.5}));sh.rotation.x=-Math.PI/2;sh.position.y=-.55;sh.receiveShadow=true;S.add(sh);
+var G=new T.Group();S.add(G);
+function add(o,x,y,z){o.position.set(x,y,z);G.add(o);return o}
+var tray=new T.Mesh(new T.CylinderGeometry(3.55,3.75,.24,96),mWood);tray.receiveShadow=tray.castShadow=true;add(tray,0,-.32,0);
+var rim=new T.Mesh(new T.TorusGeometry(3.58,.06,16,120),new T.MeshStandardMaterial({color:0xd4a84b,roughness:.25,metalness:.9}));rim.rotation.x=Math.PI/2;add(rim,0,-.19,0);
+var inj=new T.Mesh(new T.CylinderGeometry(3.1,3.1,.1,96),mInj);inj.receiveShadow=true;add(inj,0,-.14,0);
+add(mound(1.0,.62,mKit,.06,4),0,-.06,0);
+var RR=1.95,pos=function(i){var a=i/6*Math.PI*2;return[Math.cos(a)*RR,Math.sin(a)*RR]},q;
+q=pos(0);var leaf=new T.Mesh(new T.CircleGeometry(.9,48),mLeaf);leaf.scale.x=1.1;leaf.rotation.x=-Math.PI/2;leaf.receiveShadow=true;add(leaf,q[0],-.075,q[1]);add(mound(.5,.65,mAyib,.07,6),q[0],-.02,q[1]);
+q=pos(1);add(mound(.62,.6,mGom,.08,5),q[0],-.04,q[1]);
+q=pos(2);var wx=q[0],wz=q[1];add(mound(.8,.3,mWot,.03,3),wx,-.06,wz);
+[[-.22,.1],[.28,-.12]].forEach(function(e){var w=new T.Mesh(new T.SphereGeometry(.3,24,16),mEgg);w.scale.y=.55;w.castShadow=true;add(w,wx+e[0],.1,wz+e[1]);var y=new T.Mesh(new T.SphereGeometry(.13,20,14),mYolk);y.scale.y=.6;add(y,wx+e[0],.2,wz+e[1])});
+var dr=new T.Mesh(new T.CylinderGeometry(.09,.14,.8,16),mMeat);dr.rotation.z=1.2;dr.castShadow=true;add(dr,wx+.05,.2,wz+.3);
+q=pos(3);add(mound(.66,.42,mShi,.02,3),q[0],-.04,q[1]);
+q=pos(4);add(mound(.62,.45,mLen,.04,5),q[0],-.04,q[1]);
+q=pos(5);for(var i=0;i<14;i++){var c=new T.SphereGeometry(rnd(.1,.17),12,10);lump(c,.3,9);var m=new T.Mesh(c,i%5==4?mPep:mTibs);m.scale.y=.7;m.castShadow=true;var a=rnd(0,6.28),r=rnd(0,.5);add(m,q[0]+Math.cos(a)*r,.02+(i%3)*.06,q[1]+Math.sin(a)*r)}
+[.8,2.9,5.0].forEach(function(a){var pv=new T.Group();pv.position.set(Math.cos(a)*3.33,0,Math.sin(a)*3.33);pv.rotation.y=-(a+Math.PI/2);var rl=new T.Mesh(new T.CylinderGeometry(.2,.2,.9,32),[mInj,mSpiral,mSpiral]);rl.rotation.z=Math.PI/2;rl.castShadow=true;pv.add(rl);G.add(pv)});
+var st=CT(function(x){var g=x.createRadialGradient(256,256,0,256,256,256);g.addColorStop(0,'rgba(255,255,255,.55)');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.fillRect(0,0,512,512)},1),SP=[],src=[[0,0],[wx,wz]];
+for(var i=0;i<16;i++){var s=new T.Sprite(new T.SpriteMaterial({map:st,transparent:true,depthWrite:false,opacity:0}));s.userData.i=i;G.add(s);SP.push(s)}
+var pn=300,pg=new T.BufferGeometry(),pp=new Float32Array(pn*3);for(var j=0;j<pn;j++){pp[j*3]=(Math.random()-.5)*14;pp[j*3+1]=Math.random()*7-1;pp[j*3+2]=(Math.random()-.5)*10}
+pg.setAttribute('position',new T.BufferAttribute(pp,3));var pts=new T.Points(pg,new T.PointsMaterial({color:0xf2d487,size:.05,transparent:true,opacity:.75}));S.add(pts);
+var off=0,dn=0,lx=0;cv.style.touchAction='pan-y';cv.style.cursor='grab';cv.addEventListener('pointerdown',function(e){dn=1;lx=e.clientX;cv.setPointerCapture(e.pointerId)});addEventListener('pointerup',function(){dn=0});cv.addEventListener('pointermove',function(e){if(dn){off+=(e.clientX-lx)*.01;lx=e.clientX}});var mx=0,my=0;addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+function rs(){var w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);C.aspect=w/h;var k=Math.max(1,1.05/C.aspect);C.position.set(0,5.4*k,8*k);C.lookAt(0,0,0);C.updateProjectionMatrix()}rs();addEventListener('resize',rs);
+var t=0;(function lp(){t+=.01;G.rotation.y=t*.4+mx*.6+off;G.rotation.x=my*.2;G.position.y=Math.sin(t*1.5)*.1;
+SP.forEach(function(s){var i=s.userData.i,ph=(t*.25+i/16)%1,o=src[i%2];s.position.set(o[0]+Math.sin(t*2+i)*.18,.5+ph*2.2,o[1]+Math.cos(t*2+i)*.18);s.material.opacity=Math.sin(ph*Math.PI)*.22;var k=.7+ph*1.3;s.scale.set(k,k,1)});
+var p=pg.attributes.position;for(var k=0;k<pn;k++){p.array[k*3+1]+=.006;if(p.array[k*3+1]>6)p.array[k*3+1]=-1}p.needsUpdate=true;pts.rotation.y=t*.05;
+R.render(S,C);requestAnimationFrame(lp)})()})();
+// Kitfo plate 2D animated
+(function(){var c=document.getElementById('c2d'),x=c.getContext('2d'),t=0;
+function d(){t+=.012;x.clearRect(0,0,600,600);x.save();x.translate(300,300);x.rotate(t*.3);
+var g=x.createRadialGradient(0,0,20,0,0,260);g.addColorStop(0,'#f0dcae');g.addColorStop(1,'#d2b57c');x.fillStyle=g;x.beginPath();x.arc(0,0,260,0,7);x.fill();
+x.strokeStyle='#d4a84b';x.lineWidth=5;x.setLineDash([2,14]);x.beginPath();x.arc(0,0,278,0,7);x.stroke();x.setLineDash([]);
+var it=[['#8e1f12',0,0,90],['#f4ead0',120,-80,48],['#3f7a3a',-130,70,52],['#c98a1e',90,120,42],['#6b2a14',-100,-110,44]];
+it.forEach(function(o,i){var s=1+Math.sin(t*2+i)*.04;x.fillStyle=o[0];x.beginPath();x.arc(o[1],o[2],o[3]*s,0,7);x.fill();x.fillStyle='rgba(255,255,255,.12)';x.beginPath();x.arc(o[1]-o[3]*.3,o[2]-o[3]*.3,o[3]*.35,0,7);x.fill()});
+x.restore();requestAnimationFrame(d)}d()})();
+</script>
+</body>
+</html>
